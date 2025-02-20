@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:ignore="MissingDefaultResource">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbTitle"
+        app:leftIcon="@drawable/ic_arrow_start"
+        app:leftIconTint="@color/blue_700"
+        app:title="@string/details_report_post"
+        app:titleColor="@color/blue_700"
+        app:titleStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <vn.xdeuhug.widget.layout.NestedLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_8"
+                tools:ignore="UselessParent">
+                <!--  Layout  include Author post     -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imvAuthor"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_user_default" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/dp_16"
+                        tools:ignore="NestedWeights">
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextView
+                            android:id="@+id/tvAuthor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_900"
+                            android:textColorLink="@color/gray_900"
+                            android:textSize="@dimen/sp_16"
+                            tools:text="AI là me" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Layout include content post   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_2"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:text="@string/privacy_policy" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+            <!--     Layout report       -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dp_4">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dp_8"
+                    android:text="@string/sum_report"
+                    android:textSize="@dimen/sp_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/llNotFound"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="MissingDefaultResource">
+
+                    <ImageView
+                        android:id="@+id/imvNotData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_not_report" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:text="@string/no_report"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_600" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </vn.xdeuhug.widget.layout.NestedLinearLayout>
+</LinearLayout>

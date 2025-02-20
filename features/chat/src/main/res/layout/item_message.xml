@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_8"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_4"
+    android:gravity="end"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:background="@drawable/bg_gray_200_no_stroke"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            tools:text="fjasfklsajf s fsjfksjaf  fskajflksaj fsaj fs àkjsalkf à sadswsafsf" />
+
+        <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+            android:id="@+id/vpvVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:enableVisualizer="true"
+            app:playPauseBackgroundColor="@color/blue_700"
+            app:playPauseCornerRadius="100"
+            app:playProgressbarColor="@color/blue_700"
+            app:progressTimeColor="@color/white"
+            app:seekBarProgressColor="@color/white"
+            app:seekBarThumbColor="#FFC107"
+            app:shareBackgroundColor="@color/blue_700"
+            app:shareCornerRadius="100"
+            app:shareText="@string/share"
+
+            app:showShareButton="false"
+            app:showTiming="true"
+            app:timingBackgroundColor="@color/red_app_senior_sociable"
+            app:viewBackground="@color/blue_700"
+            app:viewCornerRadius="40"
+            app:visualizationPlayedColor="@color/green_100"
+            app:visualizationNotPlayedColor="@color/blue_700" />
+    </LinearLayout>
+
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:id="@+id/tvTimeChat"
+        android:layout_below="@id/llParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        tools:text="13:00 19/09/2029"
+        android:textSize="@dimen/sp_10"/>
+
+    <ImageView
+        android:id="@+id/imvInteract"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_below="@id/llParent"
+        android:layout_marginTop="-16dp"
+        android:src="@drawable/ic_laugh"
+        android:visibility="gone" />
+</RelativeLayout>

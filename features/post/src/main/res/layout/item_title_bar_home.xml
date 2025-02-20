@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:contentDescription="@string/default_image"
+        android:background="@drawable/text_logo_senior_sociable"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end|center_vertical">
+        <ImageView
+            android:id="@+id/imvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_search_border_circle"
+            android:layout_marginHorizontal="@dimen/dp_4"
+            android:contentDescription="@string/default_image" />
+        <RelativeLayout
+            android:id="@+id/rlNotification"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginHorizontal="@dimen/dp_4">
+            <ImageView
+                android:id="@+id/imvNotification"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_notification_border_circle"
+                android:contentDescription="@string/default_image" />
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:id="@+id/tvNumberOfNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/sp_6"
+                android:background="@drawable/bg_circle_orange"
+                android:backgroundTint="@color/red_app_senior_sociable"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAddFriend"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginHorizontal="@dimen/dp_4">
+            <ImageView
+                android:id="@+id/imvAddFriend"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_add_user_circle"
+                android:contentDescription="@string/default_image" />
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:id="@+id/tvNumberOfAddFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/sp_8"
+                android:background="@drawable/bg_circle_orange"
+                android:backgroundTint="@color/red_app_senior_sociable"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>

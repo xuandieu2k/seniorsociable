@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbCreatePost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingVertical="0dp"
+        app:lineDrawable="@color/gray_200"
+        app:lineSize="@dimen/dp_8"
+        app:lineVisible="true"
+        app:rightTitleColor="@color/color_text_selected"
+        app:rightTitleSize="@dimen/sp_16"
+        app:title="@string/personal_page"
+        app:titleStyle="bold" />
+    <!-- Layout scroll   -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tbCreatePost"
+        android:background="@color/white">
+
+        <!-- Layout child include content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_220">
+
+                <RelativeLayout
+                    android:id="@+id/RlBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_160"
+                    android:layout_alignParentTop="true"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/imvBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_160"
+                        android:contentDescription="@string/default_image"
+                        android:maxHeight="@dimen/dp_160"
+                        tools:src="@drawable/ic_notification" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray_200" />
+                </RelativeLayout>
+                <!--                < Relative avatar -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_4"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/RlAvatar"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:id="@+id/imvAvatar"
+                            android:layout_width="@dimen/dp_80"
+                            android:layout_height="@dimen/dp_80"
+                            android:background="@drawable/ic_user_default"
+                            android:contentDescription="@string/default_image"
+                            android:maxHeight="@dimen/dp_80" />
+                    </RelativeLayout>
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:id="@+id/tvUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        tools:text="Xuân Diệu" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_8"
+                android:background="@color/gray_200" />
+
+            <LinearLayout
+                android:id="@+id/llEditInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:paddingVertical="@dimen/dp_8"
+                android:weightSum="2"
+                android:baselineAligned="false">
+                <LinearLayout
+                    android:id="@+id/llAddFriend"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_gray_200_no_stroke"
+                    android:backgroundTint="@color/gray_400"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:gravity="center"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/imvAddFriend"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        tools:src="@drawable/ic_user_plus"
+                        app:tint="@color/white"
+                        android:contentDescription="@string/default_image" />
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:id="@+id/tvAddFriend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="0dp"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:paddingVertical="@dimen/dp_20"
+                        tools:text="@string/add_friends"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_gray_200_no_stroke"
+                    android:backgroundTint="@color/blue_700"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:gravity="center"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/imvChat"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:src="@drawable/ic_member_chat"
+                        app:tint="@color/white"
+                        android:contentDescription="@string/default_image" />
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:id="@+id/tvChat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="0dp"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:paddingVertical="@dimen/dp_20"
+                        android:text="@string/message"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_8"
+                android:background="@color/gray_200" />
+            <!--     Layout Information       -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:text="@string/information"
+                    android:textColor="@color/gray_600"
+                    android:textSize="@dimen/sp_18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/gray_200" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_cake_birthday"
+                        app:tint="@color/gray_600" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:id="@+id/tvBirthday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Sinh nhật 27/09/2001"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_mark_home"
+                        app:tint="@color/gray_600" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:id="@+id/tvFromTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:gravity="center_vertical"
+                        android:text="Đến từ Việt Nam"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/default_image"
+                        android:src="@drawable/ic_time_quarter_to"
+                        app:tint="@color/gray_600" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:id="@+id/tvJoinIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:gravity="center_vertical"
+                        android:text="Tham gia Tháng 1 năm 2019"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_8"
+                android:background="@color/gray_200" />
+            <!--     Layout Information       -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:text="@string/friend"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_18" />
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextView
+                            android:id="@+id/tvNumberOfFriend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_600"
+                            tools:text="1K bạn bè" />
+                    </LinearLayout>
+
+                    <!--                    <vn.xdeuhug.seniorsociable.widget.AppButtonBold-->
+                    <!--                        android:id="@+id/btnFindFriend"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_gravity="center_vertical|end"-->
+                    <!--                        android:background="@drawable/bg_border_button_green"-->
+                    <!--                        android:text="@string/find_friends"-->
+                    <!--                        android:textColor="@color/green_007" />-->
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/llNoFriend"
+                    android:visibility="gone"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_160"
+                        android:layout_height="@dimen/dp_160"
+                        android:background="@drawable/ic_friend_not_found"
+                        android:contentDescription="@string/default_image" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:text="@string/no_friend"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_8"
+                android:background="@color/gray_200" />
+            <!--     Layout Information       -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:text="@string/posts"
+                    android:textColor="@color/gray_600"
+                    android:textSize="@dimen/sp_18" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_2"
+                android:background="@color/gray_200" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/sflLoadData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/item_post_shimmer" />
+
+                    <include layout="@layout/item_post_shimmer" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_200" />
+
+            <LinearLayout
+                android:id="@+id/loadMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_4"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_4"
+                    android:src="@drawable/picture_anim_progress"
+                    android:tint="@color/red_app_senior_sociable" />
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đang tải..."
+                    android:textColor="@color/red_app_senior_sociable" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNoData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="@dimen/dp_80"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_no_post_circle"
+                        android:contentDescription="@string/default_image"
+                        app:tint="@color/gray_200" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:id="@+id/tvNoData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:text="@string/not_have_a_post"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

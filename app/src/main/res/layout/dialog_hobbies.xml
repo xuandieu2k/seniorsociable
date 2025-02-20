@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbTitle"
+        app:title="@string/hobbies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lineDrawable="@color/gray_200"
+        app:leftIcon="@drawable/ic_arrow_start"
+        app:leftIconTint="@color/blue_700"
+        app:rightTitle="@string/save"
+        app:rightTitleStyle="bold"
+        app:rightTitleColor="@color/blue_700"
+        app:titleColor="@color/blue_700"
+        app:titleStyle="bold"
+        app:lineSize="@dimen/dp_2"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:background="@drawable/bg_gray_200_no_stroke"
+        android:gravity="center_vertical"
+        android:theme="@style/SearchView"
+        app:closeIcon="@drawable/ic_cross"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="@string/search"
+        app:searchIcon="@drawable/ic_search" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:background="@color/gray_200"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHobbies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/sflLoadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBackgroundNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imvNotFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/default_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_empty" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imvNotFound"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="@string/not_found"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+</LinearLayout>

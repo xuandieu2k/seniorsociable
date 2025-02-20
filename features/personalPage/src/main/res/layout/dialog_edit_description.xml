@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_border_dialog"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/update_description"
+        app:rightTitle="@string/save"
+        app:titleStyle="bold"
+        app:rightTitleStyle="bold"
+        app:rightTitleColor="@color/blue_700"
+        app:titleColor="@color/blue_700"
+        app:leftIcon="@drawable/ic_arrow_start"
+        app:leftIconTint="@color/blue_700"
+        android:layout_marginBottom="@dimen/dp_8"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_4"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imvAvatar"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:contentDescription="@string/description" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:id="@+id/tvUsername"
+                tools:text="Xuân Diệu"
+                android:textSize="@dimen/sp_16"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:drawableStart="@drawable/ic_public"
+                android:drawableTint="@color/gray_600"
+                android:textColor="@color/gray_600"
+                android:text="@string/status_public"
+                android:drawablePadding="@dimen/dp_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8">
+
+        <vn.xdeuhug.seniorsociable.widget.AppEditText
+            android:id="@+id/edtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_white_stroke_blue_700"
+            android:gravity="start|top"
+            android:paddingVertical="@dimen/dp_4"
+            android:paddingHorizontal="@dimen/dp_4"
+            android:lines="5"
+            android:maxLength="150"
+            android:maxLines="5"
+            android:textColor="@color/blue_700" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:id="@+id/tvCountChar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            tools:text="11/110"
+            android:text="@string/max_length_description"/>
+    </LinearLayout>
+</LinearLayout>

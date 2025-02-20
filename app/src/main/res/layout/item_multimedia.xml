@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMedia"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="@dimen/dp_400"
+    android:layout_margin="@dimen/dp_4">
+
+    <ImageView
+        android:id="@+id/imvClose"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_close"
+        app:tint="@color/blue_700" />
+    <ImageView
+        android:id="@+id/imvImage"
+        android:layout_below="@+id/imvClose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+<!--    <com.google.android.exoplayer2.ui.PlayerView-->
+<!--        android:id="@+id/plvVideo"-->
+<!--        android:layout_below="@+id/imvClose"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="gone"-->
+<!--        android:scaleType="fitXY"/>-->
+    <ImageView
+        android:id="@+id/imvPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_player_pause"
+        app:tint="@color/gray_600" />
+</RelativeLayout>

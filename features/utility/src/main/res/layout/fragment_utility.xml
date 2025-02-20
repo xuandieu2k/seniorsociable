@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_utility" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+                <!--         Linear statistical       -->
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:baselineAligned="false">-->
+                <!--                    <LinearLayout-->
+                <!--                        android:background="@drawable/bg_gray_200_no_stroke"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginHorizontal="@dimen/dp_4"-->
+                <!--                        android:layout_weight="0.6">-->
+
+                <!--                    </LinearLayout>-->
+                <!--                    <LinearLayout-->
+                <!--                        android:background="@drawable/bg_gray_200_no_stroke"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginHorizontal="@dimen/dp_4"-->
+                <!--                        android:layout_weight="0.4">-->
+                <!--                        <vn.xdeuhug.seniorsociable.widget.AppTextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:text="@string/news_member"/>-->
+                <!--                    </LinearLayout>-->
+                <!--                </LinearLayout>-->
+                <!--                -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:id="@+id/llStatistical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_statistical" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/statistical" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llQR"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_qr" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/qr_add_friend" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--    -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:id="@+id/llFriend"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_user" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/friend" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llEvent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_event" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/event" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--    -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:id="@+id/llNews"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_news" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/news" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llWatch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_watch" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/watch" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--    -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:id="@+id/llNotification"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_notification" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/notification" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llLove"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_love" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/love" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--    -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:id="@+id/llSearchDiseases"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_medicine" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/look_up_diseases" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCensorship"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_post_moderation" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/post_moderation" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--    -->
+                    <!--    -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_4"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:id="@+id/llAccountManagement"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_account_management" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/management_account" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llReport"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_gray_200_no_stroke"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/dp_8"
+                            android:paddingStart="@dimen/dp_8">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_24"
+                                android:layout_height="@dimen/dp_24"
+                                android:contentDescription="@string/default_image"
+                                android:src="@drawable/ic_setting_report" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="@string/report_post" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--    -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llTermsOfUse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingTop="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_16"
+                            android:paddingBottom="@dimen/dp_16"
+                            tools:ignore="RtlSymmetry">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_56"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_setting_terms_of_use"
+                                app:tint="@color/gray_600"
+                                tools:ignore="ContentDescription" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@string/terms_of_use"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_32"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_next_white"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/bg_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llPrivacyPolicy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingTop="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_16"
+                            android:paddingBottom="@dimen/dp_16"
+                            tools:ignore="RtlSymmetry">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_56"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_setting_privacy_policy"
+                                tools:ignore="ContentDescription" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@string/privacy_policy"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_32"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_next_white"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/bg_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingTop="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_16"
+                            android:paddingBottom="@dimen/dp_16"
+                            tools:ignore="RtlSymmetry">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_56"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_setting_feedback"
+                                tools:ignore="ContentDescription" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@string/feedback"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_32"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_next_white"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/bg_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingTop="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_16"
+                            android:paddingBottom="@dimen/dp_16"
+                            tools:ignore="RtlSymmetry">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_56"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_setting_rating"
+                                tools:ignore="ContentDescription" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@string/rating_app"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_32"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_next_white"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/bg_gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingTop="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_16"
+                            android:paddingBottom="@dimen/dp_16"
+                            tools:ignore="RtlSymmetry">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_56"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_setting_information"
+                                tools:ignore="ContentDescription" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@string/info"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_32"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_next_white"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5"
+                            android:background="@color/bg_gray" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnLogOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_margin="@dimen/dp_16"
+                    android:background="@drawable/bg_gray_200_no_stroke"
+                    android:backgroundTint="@color/blue_200"
+                    android:gravity="center">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_56"
+                        android:layout_marginHorizontal="@dimen/dp_8"
+                        android:background="@color/transparent"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="@string/logout"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/sp_24" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

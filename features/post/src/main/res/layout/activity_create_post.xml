@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbCreatePost"
+        android:layout_alignParentTop="true"
+        app:title="@string/create_post"
+        app:rightTitle="@string/post"
+        app:titleStyle="bold"
+        app:rightTitleColor="@color/color_text_selected"
+        android:paddingVertical="0dp"
+        app:rightTitleSize="@dimen/sp_16"
+        app:lineVisible="true"
+        app:lineSize="@dimen/dp_8"
+        app:lineDrawable="@color/gray_200"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!-- Layout scroll   -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvParent"
+        android:layout_below="@+id/tbCreatePost"
+        android:layout_above="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!-- Layout child include content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Layout header include avatar -->
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_8"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/imvAvatar"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/default_image" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/dp_8"
+                    android:orientation="vertical">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:id="@+id/tvFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        tools:text="Xuân Diệu" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextView
+                            android:id="@+id/btnStatusPost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_border_button_8dp_blue_100"
+                            android:drawableStart="@drawable/ic_public"
+                            android:drawableEnd="@drawable/ic_arrow_down_bold"
+                            android:drawablePadding="@dimen/dp_8"
+                            android:drawableTint="@color/blue_700"
+                            android:paddingHorizontal="@dimen/dp_8"
+                            android:paddingVertical="@dimen/dp_4"
+                            android:text="@string/status_public"
+                            android:textColor="@color/blue_700"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/sp_12" />
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextView
+                            android:id="@+id/btnAlbum"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_border_button_8dp_blue_100"
+                            android:drawableStart="@drawable/ic_plus"
+                            android:drawableEnd="@drawable/ic_arrow_down_bold"
+                            android:drawableTint="@color/blue_700"
+                            android:textColor="@color/blue_700"
+                            android:textSize="@dimen/sp_12"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:paddingVertical="@dimen/dp_4"
+                            android:paddingHorizontal="@dimen/dp_8"
+                            android:drawablePadding="@dimen/dp_8"
+                            android:gravity="center_vertical"
+                            android:text="@string/album" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_2"
+                android:background="@color/gray_200" />
+
+            <!-- Layout data -->
+            <vn.xdeuhug.seniorsociable.widget.AppEditText
+                android:id="@+id/edtDoYouThinking"
+                android:background="@null"
+                android:hint="@string/do_you_thinking_about"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:textSize="@dimen/sp_20"
+                android:textColorHint="@color/gray_600"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMedia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_4"
+        android:background="@color/gray_200"
+        android:layout_above="@id/llBottom"/>
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingVertical="@dimen/dp_8"
+        android:paddingHorizontal="@dimen/dp_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnChoosePicture"
+            android:paddingVertical="@dimen/dp_8"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_gallery_ss"
+            android:contentDescription="@string/default_image" />
+        <ImageView
+            android:id="@+id/btnUserTag"
+            android:paddingVertical="@dimen/dp_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_user_tag"
+            android:contentDescription="@string/default_image" />
+
+        <ImageView
+            android:id="@+id/btnChooseLocation"
+            android:paddingVertical="@dimen/dp_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/ic_mark" />
+        <ImageView
+            android:id="@+id/btnChooseMore"
+            android:paddingVertical="@dimen/dp_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/ic_three_dot" />
+    </LinearLayout>
+</RelativeLayout>

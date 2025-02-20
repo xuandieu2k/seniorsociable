@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftIcon="@drawable/ic_arrow_start"
+        app:leftIconTint="@color/white"
+        app:lineDrawable="@color/white"
+        app:lineSize="@dimen/dp_2"
+        android:background="@color/black"
+        app:titleStyle="bold" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMedia"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

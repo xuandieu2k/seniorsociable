@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_border_dialog"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:id="@+id/tvTitleReport"
+        android:layout_width="match_parent"
+        android:paddingVertical="@dimen/dp_8"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:background="@drawable/bg_border_header_dialog"
+        android:backgroundTint="@color/green_008"
+        android:text="@string/report_post"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_24" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gray_100_stroke_gray_200_8px"
+            android:layout_marginTop="@dimen/dp_16"
+            android:padding="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:id="@+id/tvTopicReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reason_report"
+                android:textColor="@color/gray_900" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnReason"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_weight="0.9"
+                    android:background="@null"
+                    android:paddingVertical="0dp"
+                    android:paddingStart="0dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:id="@+id/imvDrownList"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gray_100_stroke_gray_200_8px"
+            android:layout_marginTop="@dimen/dp_16"
+            android:padding="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:id="@+id/tvContentReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/content_report"
+                android:textColor="@color/gray_900" />
+
+            <vn.xdeuhug.seniorsociable.widget.AppEditText
+                android:id="@+id/edtReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/bg_gray_200_no_stroke"
+                android:backgroundTint="@color/white"
+                android:hint="@string/enter_reason_report"
+                android:gravity="top|start"
+                android:padding="@dimen/dp_4"
+                android:lines="5" />
+        </LinearLayout>
+
+        <vn.xdeuhug.seniorsociable.widget.AppButton
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ButtonStyle"
+            android:enabled="false"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/send" />
+    </LinearLayout>
+</LinearLayout>

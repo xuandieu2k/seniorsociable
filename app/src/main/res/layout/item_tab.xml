@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlTab"
+    android:background="@drawable/bg_activated_gray"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="@dimen/dp_48">
+
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:id="@+id/tvTextReact"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_44"
+        android:layout_gravity="center_vertical"
+        android:drawableStart="@drawable/ic_laugh"
+        android:drawablePadding="@dimen/dp_8"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dp_32"
+        android:paddingVertical="@dimen/dp_8"
+        android:text="1.2K"
+        android:textColor="@color/gray_600" />
+
+    <View
+        android:id="@+id/vline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_4"
+        android:background="#F7B125"/>
+</LinearLayout>

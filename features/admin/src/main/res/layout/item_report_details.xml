@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_8"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/imvAvatar"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_user_default"
+                android:contentDescription="@string/default_image" />
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:id="@+id/tvUsername"
+                android:layout_marginStart="@dimen/dp_8"
+                tools:text="Xuân Diệu"
+                android:textColor="@color/gray_600"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/reason"
+            android:textColor="@color/gray_600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:layout_marginTop="@dimen/dp_4"
+            android:id="@+id/tvContentReason"
+            android:textColor="@color/gray_600"
+            tools:text="Nội dung bài viết không phù hợp và không chính xác. hình ảnh quá ..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:backgroundTint="@color/red_600"
+        android:background="@drawable/ic_report_new">
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:id="@+id/tvNameReport"
+            android:layout_centerInParent="true"
+            tools:text="Lý do khác"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>

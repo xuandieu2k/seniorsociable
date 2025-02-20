@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_gray_200_no_stroke"
+    android:layout_marginHorizontal="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_8"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_200"
+            android:layout_gravity="center"
+            android:maxHeight="@dimen/dp_200"
+            android:layout_weight="6.5">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imvLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:maxHeight="@dimen/dp_200"
+                tools:src="@drawable/news_image" />
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.7"
+                    android:padding="@dimen/dp_2"
+                    android:background="@drawable/bg_box_tran"/>
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    tools:text="Viêm Amidan"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:padding="@dimen/dp_2"
+            android:background="@drawable/bg_box_tran"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/dp_160"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="8"
+                android:ellipsize="end"
+                tools:text="Viêm amidan là một trong những bệnh tai mũi họng thường gặp ở trẻ em và người lớn. Theo số liệu thống kê của Tổ chức Y tế Thế giới (WHO), tỷ lệ người mắc bệnh liên quan đến đường hô hấp trên toàn cầu lên đến 73,7%. Trong đó, có khoảng 30,6% người bị viêm amidan. Bệnh thường tái lại nhiều lần và rất dễ gây biến chứng, ảnh hưởng nhiều đến sinh hoạt, công việc và sức khỏe của người bệnh."
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

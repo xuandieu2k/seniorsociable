@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftIcon="@drawable/ic_arrow_start"
+        app:leftIconTint="@color/gray_900"
+        app:lineDrawable="@color/gray_200"
+        app:lineSize="@dimen/dp_2"
+        app:title="@string/choose_album"
+        app:titleStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlCreateAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_96"
+        android:orientation="vertical">
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_border_button_8dp_blue_100"
+            android:drawableStart="@drawable/ic_plus"
+            android:drawablePadding="@dimen/dp_8"
+            android:drawableTint="@color/blue_700"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/dp_8"
+            android:paddingVertical="@dimen/dp_8"
+            android:text="@string/create_album"
+            android:textColor="@color/blue_700"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_8"
+        android:background="@color/gray_200" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/sflLoadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+            <include
+                layout="@layout/item_shimmer_album"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBackgroundNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imvNotFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/default_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_empty" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imvNotFound"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="@string/not_found"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+</LinearLayout>

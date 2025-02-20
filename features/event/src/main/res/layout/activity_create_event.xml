@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lineDrawable="@color/gray_200"
+        app:lineSize="@dimen/dp_2"
+        app:title="@string/create_event"
+        app:rightTitle="@string/save"
+        app:rightTitleStyle="bold"
+        app:rightTitleColor="@color/color_text_selected"
+        app:titleStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_240"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/imvBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/default_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_events" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="RelativeOverlap">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:id="@+id/tvGallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_gray_200_no_stroke"
+                        android:backgroundTint="@color/black"
+                        android:drawableEnd="@drawable/ic_galleyry_new"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:drawableTint="@color/white"
+                        android:padding="@dimen/dp_8"
+                        android:text="@string/gallery"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:id="@+id/tvErrorImage"
+                android:visibility="visible"
+                android:textColor="@color/red_600"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginStart="@dimen/dp_8"
+                android:textSize="@dimen/sp_12"
+                tools:text="Vui lòng nhập đầy đủ thông tin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!--    Layout content        -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dp_8">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_4"
+                    android:text="@string/event"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <vn.xdeuhug.seniorsociable.widget.AppEditText
+                    android:id="@+id/edtContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gray_200_no_stroke"
+                    android:hint="@string/content_event"
+                    android:lines="5"
+                    android:paddingStart="@dimen/dp_8" />
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:id="@+id/tvErrorContent"
+                    android:visibility="visible"
+                    android:textColor="@color/red_600"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:textSize="@dimen/sp_12"
+                    tools:text="Vui lòng nhập đầy đủ thông tin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!--    Layout time        -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_8">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_gray_200_no_stroke"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:paddingVertical="@dimen/dp_8"
+                    tools:ignore="Suspicious0dp">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_start"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/sp_12" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gray_200_no_stroke"
+                        android:paddingHorizontal="@dimen/dp_4"
+                        android:backgroundTint="@color/white"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/llTimeStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="@dimen/dp_4"
+                                android:text="@string/time" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:id="@+id/tvTimeStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_8"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="@dimen/dp_4"
+                                tools:text="27/09/2001" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_4"
+                            android:background="@color/gray_200"/>
+                        <LinearLayout
+                            android:id="@+id/llHourStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="@dimen/dp_4"
+                                android:text="@string/hour" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:id="@+id/tvHourStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_8"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="@dimen/dp_4"
+                                tools:text="08:00" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_gray_200_no_stroke"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:paddingVertical="@dimen/dp_8"
+                    tools:ignore="Suspicious0dp">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_finish"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/sp_12" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:paddingHorizontal="@dimen/dp_4"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/bg_gray_200_no_stroke"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/llTimeEnd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="@dimen/dp_4"
+                                android:text="@string/time" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:id="@+id/tvTimeEnd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_8"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="@dimen/dp_4"
+                                tools:text="27/09/2001" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_4"
+                            android:background="@color/gray_200"/>
+                        <LinearLayout
+                            android:id="@+id/llHourEnd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="@dimen/dp_4"
+                                android:text="@string/hour" />
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:id="@+id/tvHourEnd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_8"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="@dimen/dp_4"
+                                tools:text="20:00" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--   Time content-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dp_8">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_event"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tvLocationEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/bg_gray_200_no_stroke"
+                    android:drawableStart="@drawable/ic_location"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:gravity="center_vertical"
+                    android:text="@string/choose_location_organization"
+                    android:padding="@dimen/dp_8"/>
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:id="@+id/tvErrorAddress"
+                    android:visibility="visible"
+                    android:textColor="@color/red_600"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:textSize="@dimen/sp_12"
+                    tools:text="Vui lòng nhập đầy đủ thông tin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

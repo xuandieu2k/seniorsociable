@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:maxHeight="@dimen/dp_88"
+    android:maxWidth="@dimen/dp_72"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:padding="@dimen/dp_4"
+    android:gravity="center"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imvAvatar"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        tools:src="@drawable/ic_circle_user"
+        android:contentDescription="@string/default_image" />
+    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+        android:id="@+id/tvUsername"
+        tools:text="Xuân Diệu"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

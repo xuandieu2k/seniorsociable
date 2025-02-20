@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbObjectPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lineDrawable="@color/gray_200"
+        app:lineSize="@dimen/dp_2"
+        app:title="@string/object_of_posts"
+        app:leftIcon="@drawable/ic_arrow_start"
+        app:leftIconTint="@color/gray_900"
+        app:titleStyle="bold" />
+
+    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_16"
+        android:text="@string/who_can_see_this_post"
+        android:textColor="@color/gray_900" />
+
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:text="@string/content_who_can_see_this_post" />
+
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:text="@string/content_status_post" />
+
+    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_16"
+        android:text="@string/choose_object"
+        android:textColor="@color/gray_900" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--  Layout public  -->
+        <LinearLayout
+            android:id="@+id/llPublic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_16">
+
+            <RadioButton
+                android:id="@+id/rbPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:button="@drawable/bg_radio_button_circle_background_blue"
+                android:checked="false" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/ic_public"
+                app:tint="@color/gray_600" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_public"
+                    android:textColor="@color/gray_900"
+                    android:textSize="@dimen/sp_16" />
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_status_public" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_200" />
+        <!--  Layout just for me  -->
+        <LinearLayout
+            android:id="@+id/llPrivate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_16">
+
+            <RadioButton
+                android:id="@+id/rbPrivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:button="@drawable/bg_radio_button_circle_background_blue"
+                android:checked="false" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/ic_private"
+                app:tint="@color/gray_600" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_private"
+                    android:textColor="@color/gray_900"
+                    android:textSize="@dimen/sp_16" />
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_status_private" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_200" />
+        <!--  Layout public  -->
+        <LinearLayout
+            android:id="@+id/llFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_16">
+
+            <RadioButton
+                android:id="@+id/rbFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:button="@drawable/bg_radio_button_circle_background_blue"
+                android:checked="false" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/ic_friend"
+                app:tint="@color/gray_600" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_friend"
+                    android:textColor="@color/gray_900"
+                    android:textSize="@dimen/sp_16" />
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_status_friend" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_200" />
+    </RadioGroup>
+</LinearLayout>

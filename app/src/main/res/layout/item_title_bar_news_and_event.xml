@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+        android:id="@+id/tvTitleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/gray_900"
+        android:text="@string/news_and_event"/>
+    <ImageView
+        android:id="@+id/imvSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:background="@drawable/ic_search_border_circle"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:contentDescription="@string/default_image" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imvNotification"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="end|center_vertical"-->
+<!--        android:background="@drawable/ic_notification_border_circle"-->
+<!--        android:layout_marginEnd="@dimen/dp_8"-->
+<!--        android:contentDescription="@string/default_image" />-->
+</androidx.appcompat.widget.Toolbar>

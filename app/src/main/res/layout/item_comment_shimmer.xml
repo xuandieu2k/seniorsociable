@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/dp_16"
+    android:orientation="horizontal"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/imvAvatar"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:background="@drawable/circle_orange"
+        android:backgroundTint="@color/gray_200"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+            android:id="@+id/tvUsername"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_800"
+            android:background="@drawable/bg_gray_200_no_stroke"
+            android:layout_marginBottom="@dimen/dp_4"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/bg_gray_200_no_stroke"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_8">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4">
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:id="@+id/tvTimeAgo"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gray_200_no_stroke"
+                android:padding="@dimen/dp_4"
+                android:textColor="@color/gray_600"
+                android:textStyle="bold" />
+
+            <vn.xdeuhug.seniorsociable.widget.reactbutton.ReactButton
+                android:id="@+id/btnInteract"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gray_200_no_stroke"
+                android:layout_marginHorizontal="@dimen/dp_14"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="@dimen/dp_4"
+                android:textStyle="bold" />
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:id="@+id/tvReply"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gray_200_no_stroke"
+                android:padding="@dimen/dp_4"
+                android:textColor="@color/gray_600"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

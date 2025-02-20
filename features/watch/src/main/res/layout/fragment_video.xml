@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:fitsSystemWindows="false">
+        <!--        <include-->
+        <!--            layout="@layout/item_title_bar_watch"-->
+        <!--            />-->
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:background="@color/gray_200"-->
+        <!--            android:layout_height="@dimen/dp_8"/>-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTopic"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:scrollbars="none"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVideo"
+            android:layout_below="@id/rvTopic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+    </RelativeLayout>
+</layout>

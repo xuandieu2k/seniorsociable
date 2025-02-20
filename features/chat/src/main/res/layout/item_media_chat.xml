@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMedia"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp_8"
+    android:maxHeight="@dimen/dp_120"
+    android:maxWidth="@dimen/dp_120"
+    android:layout_marginTop="@dimen/dp_8">
+
+    <ImageView
+        android:id="@+id/imvImage"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
+        android:visibility="gone"
+        android:contentDescription="@string/default_image" />
+
+    <cn.jzvd.JzvdStd
+        android:id="@+id/plvVideo"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_border_white_stroke"
+    android:orientation="vertical"
+   >
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/feed_back"
+        app:titleStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar">
+
+        <LinearLayout
+            android:id="@+id/llParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_32">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/feed_back_full_name" />
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:id="@+id/tvSender"
+                    style="@style/AutoTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/feed_back_phone" />
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:id="@+id/tvPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <vn.xdeuhug.seniorsociable.widget.AppEditText
+                android:id="@+id/edtEmail"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_radius_gray_300"
+                android:hint="@string/email"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16" />
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:id="@+id/tvErrorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/empty_mail"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/bg_radius_gray_300"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16">
+
+                <Spinner
+                    android:id="@+id/spnTopicFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <vn.xdeuhug.seniorsociable.widget.AppEditText
+                android:id="@+id/edtContent"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_160"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/bg_radius_gray_300"
+                android:gravity="top|left"
+                android:hint="@string/feed_back_hint"
+                android:maxLines="10"
+                android:padding="@dimen/dp_16" />
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:id="@+id/tvErrorContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/empty_feedback"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:background="@drawable/bg_border_header_dialog">-->
+
+<!--        <vn.xdeuhug.seniorsociable.widget.AppButton-->
+<!--            android:id="@+id/btnCancel"-->
+<!--            style="@style/ButtonStyle"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp_16"-->
+<!--            android:layout_marginTop="@dimen/dp_8"-->
+<!--            android:layout_marginEnd="@dimen/dp_8"-->
+<!--            android:layout_marginBottom="@dimen/dp_8"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/bg_border_button_gray"-->
+<!--            android:drawableStart="@drawable/ic_cancel"-->
+<!--            android:drawablePadding="@dimen/dp_4"-->
+<!--            android:drawableTint="@color/red_600"-->
+<!--            android:elevation="0dp"-->
+<!--            android:paddingStart="@dimen/dp_56"-->
+<!--            android:paddingTop="@dimen/dp_8"-->
+<!--            android:paddingEnd="@dimen/dp_48"-->
+<!--            android:paddingBottom="@dimen/dp_8"-->
+<!--            android:text="@string/cancel"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="@color/red_600"-->
+<!--            android:textSize="@dimen/sp_16" />-->
+
+<!--        <vn.xdeuhug.seniorsociable.widget.AppButton-->
+<!--            android:id="@+id/btnConfirm"-->
+<!--            style="@style/ButtonStyle"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp_8"-->
+<!--            android:layout_marginTop="@dimen/dp_8"-->
+<!--            android:layout_marginEnd="@dimen/dp_16"-->
+<!--            android:layout_marginBottom="@dimen/dp_8"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/button_blue_selector"-->
+<!--            android:drawableStart="@drawable/ic_check_button"-->
+<!--            android:drawablePadding="@dimen/dp_4"-->
+<!--            android:drawableTint="@color/color_item_selector"-->
+<!--            android:elevation="0dp"-->
+<!--            android:paddingStart="@dimen/dp_32"-->
+<!--            android:paddingTop="@dimen/dp_8"-->
+<!--            android:paddingEnd="@dimen/dp_24"-->
+<!--            android:paddingBottom="@dimen/dp_8"-->
+<!--            android:text="@string/confirm"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="@color/color_item_selector"-->
+<!--            android:textSize="@dimen/sp_16" />-->
+<!--    </LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_border_header_dialog"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_8">
+
+        <LinearLayout
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border_button_gray"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_8">
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:id="@+id/tvMaterial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_cancel"
+                android:drawablePadding="@dimen/dp_4"
+                android:text="@string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/red_600"
+                android:textSize="@dimen/sp_16"
+                app:drawableTint="@color/red_600" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue_selector"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_8">
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:id="@+id/tvCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_check"
+                android:drawablePadding="@dimen/dp_4"
+                android:text="@string/confirm"
+                android:textAllCaps="true"
+                android:textColor="@color/color_item_selector"
+                android:textSize="@dimen/sp_16"
+                app:drawableTint="@color/color_item_selector" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

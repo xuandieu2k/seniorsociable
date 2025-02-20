@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_dialog"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:id="@+id/tvHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_border_header_dialog"
+                android:backgroundTint="@color/red_600"
+                android:gravity="center"
+                android:paddingVertical="@dimen/dp_16"
+                android:text="@string/warning"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/dp_16">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dp_16"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/dp_4"
+                    android:textColor="@color/red_600"
+                    android:textSize="@dimen/sp_18"
+                    app:textAllCaps="true"
+                    android:text="@string/your_account_is_blocked" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reason"
+                        android:textColor="@color/gray_600" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:id="@+id/tvReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:textColor="@color/gray_900"
+                        tools:text="Bạn vi phạm điều khoản sử dụng quá nhiều lần" />
+                </LinearLayout>
+                <!--                -->
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:text="@string/times"
+                        android:textColor="@color/gray_600"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                        android:id="@+id/tvTimeEnd"
+                        android:textColor="@color/gray_900"
+                        android:layout_marginTop="@dimen/dp_4"
+                        tools:text="Từ 12:00:20 23/11/2023 đến 12:00:20 30/11/2023"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <vn.xdeuhug.seniorsociable.widget.AppButtonBold
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_border_button"
+                    android:backgroundTint="@color/green_100"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/dp_4"
+                    android:text="@string/confirm"
+                    android:textAllCaps="true"
+                    android:textColor="@color/green_007"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

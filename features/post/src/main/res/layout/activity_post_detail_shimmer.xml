@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_4"
+            tools:ignore="UselessParent">
+            <!--  Layout  include Author post     -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@drawable/bg_circle_gray"
+                    android:backgroundTint="@color/gray_200"
+                    android:contentDescription="@string/default_image" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/dp_16"
+                    tools:ignore="NestedWeights">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gray_200_no_stroke"
+                        android:textColor="@color/gray_900"
+                        android:textSize="@dimen/sp_16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextView
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_gray_200_no_stroke" />
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_8"
+                            android:text="@string/big_dot"
+                            android:textColor="@color/gray_200" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_16"
+                            android:contentDescription="@string/default_image"
+                            android:src="@drawable/bg_circle_gray"
+                            app:tint="@color/gray_200" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Layout include content post   -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_160"
+                android:background="@drawable/bg_gray_200_no_stroke"
+                android:lineSpacingExtra="@dimen/dp_2"
+                android:paddingHorizontal="@dimen/dp_8" />
+        </LinearLayout>
+        <!-- Layout include number of like, comment, share   -->
+        <LinearLayout
+            android:id="@+id/llDetailsInteract"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/bg_gray_200_no_stroke"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dp_8" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:background="@color/gray_200" />
+        <!--  Layout include button like,comment,share  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/item_comment_shimmer"/>
+            <include layout="@layout/item_comment_shimmer"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

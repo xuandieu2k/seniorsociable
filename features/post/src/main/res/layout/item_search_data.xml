@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_8"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+        <ImageView
+            android:id="@+id/imvAvatar"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_time_quarter_to"
+            app:tint="@color/gray_200"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/default_image" />
+        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+            android:id="@+id/tvSearch"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_900"
+            android:layout_gravity="center_vertical"
+            tools:text="xuan dieu"/>
+    </LinearLayout>
+
+</LinearLayout>

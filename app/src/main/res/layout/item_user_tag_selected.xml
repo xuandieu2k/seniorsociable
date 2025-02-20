@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_96"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/dp_8"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/imvAvatar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical|start"
+        tools:src="@drawable/ic_user"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"/>
+    <ImageView
+        android:id="@+id/imvClose"
+        android:src="@drawable/ic_close_black"
+        android:background="@drawable/bg_circle_gray"
+        android:backgroundTint="@color/gray_200"
+        android:padding="@dimen/dp_4"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        app:tint="@color/red_700" />
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:id="@+id/tvName"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imvAvatar"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        tools:text="Sẹt boi"
+        android:textColor="@color/gray_900"
+        android:layout_gravity="center_vertical|center"/>
+</RelativeLayout>

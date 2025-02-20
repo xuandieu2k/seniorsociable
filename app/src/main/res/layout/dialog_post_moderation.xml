@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_border_dialog"
+    android:orientation="vertical">
+
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_border_header_dialog"
+        android:backgroundTint="@color/green_008"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dp_8"
+        android:text="@string/confirm_post_moderation"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llBottom"
+        android:layout_below="@+id/tvTitle"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    tools:ignore="UselessParent">
+                    <!--  Layout  include Author post     -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imvAuthor"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:contentDescription="@string/default_image"
+                            android:src="@drawable/ic_user_default" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/dp_16"
+                            tools:ignore="NestedWeights">
+
+                            <vn.xdeuhug.seniorsociable.widget.AppTextView
+                                android:id="@+id/tvAuthor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray_900"
+                                android:textColorLink="@color/gray_900"
+                                android:textSize="@dimen/sp_16"
+                                tools:text="AI là me" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Layout include content post   -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:orientation="vertical">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:id="@+id/tvContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="@dimen/dp_2"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        android:text="@string/privacy_policy" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:orientation="vertical">
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:id="@+id/tvStatus"
+                    android:layout_gravity="center"
+                    android:text="@string/status_post_moderation"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_marginVertical="@dimen/dp_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_200" />
+                    <!--  Layout public  -->
+                    <LinearLayout
+                        android:id="@+id/llPassed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_8"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_16"
+                        android:paddingVertical="@dimen/dp_8">
+
+                        <RadioButton
+                            android:id="@+id/rbPassed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|start"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:button="@drawable/bg_radio_button_circle_background_green"
+                            android:checked="false" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_32"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:src="@drawable/ic_post_is_passed"
+                            app:tint="@color/green_007" />
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/passed"
+                            android:textColor="@color/green_007"
+                            android:textSize="@dimen/sp_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_200" />
+                    <!--  Layout just for me  -->
+                    <!--  Layout public  -->
+                    <LinearLayout
+                        android:id="@+id/llNotPassed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_8"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_16"
+                        android:paddingVertical="@dimen/dp_8">
+
+                        <RadioButton
+                            android:id="@+id/rbNotPassed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|start"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:button="@drawable/bg_radio_button_circle_background_red_600"
+                            android:checked="false" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_32"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:src="@drawable/ic_post_is_not_passed"
+                            app:tint="@color/red_600" />
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/not_passed"
+                            android:textColor="@color/red_600"
+                            android:textSize="@dimen/sp_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_200" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_200" />
+                    <!--  Layout just for me  -->
+                    <!--  Layout public  -->
+                    <LinearLayout
+                        android:id="@+id/llPendingPassed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_8"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_16"
+                        android:paddingVertical="@dimen/dp_8">
+
+                        <RadioButton
+                            android:id="@+id/rbPendingPassed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|start"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:button="@drawable/bg_radio_button_circle_background_orange_700"
+                            android:checked="false" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_32"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:src="@drawable/ic_post_is_pending_passed"
+                            app:tint="@color/orange_700" />
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/pending_passed"
+                            android:textColor="@color/orange_700"
+                            android:textSize="@dimen/sp_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_200" />
+                    <!--  Layout just for me  -->
+                    <!--  Layout public  -->
+                    <LinearLayout
+                        android:id="@+id/llLocked"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_8"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_16"
+                        android:paddingVertical="@dimen/dp_8">
+
+                        <RadioButton
+                            android:id="@+id/rbLocked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|start"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:button="@drawable/bg_radio_button_circle_background_red_600"
+                            android:checked="false" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_32"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:src="@drawable/ic_post_is_locked"
+                            app:tint="@color/red_600" />
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/lock"
+                            android:textColor="@color/red_600"
+                            android:textSize="@dimen/sp_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_200" />
+                    <!--  Layout public  -->
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/llReOpen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_8"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_16"
+                        android:paddingVertical="@dimen/dp_8">
+
+                        <RadioButton
+                            android:id="@+id/rbReOpen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|start"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:button="@drawable/bg_radio_button_circle_background_blue"
+                            android:checked="false" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_32"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:src="@drawable/ic_post_reopen"
+                            app:tint="@color/blue_700" />
+
+                        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/re_open"
+                            android:textColor="@color/blue_700"
+                            android:textSize="@dimen/sp_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_200" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <vn.xdeuhug.seniorsociable.widget.AppButtonBold
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border_left_button"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_4"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/red_500"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppButtonBold
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border_right_button_green"
+            android:backgroundTint="@color/green_100"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_4"
+            android:text="@string/confirm"
+            android:textAllCaps="true"
+            android:textColor="@color/green_007"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

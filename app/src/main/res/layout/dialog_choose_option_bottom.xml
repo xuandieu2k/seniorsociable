@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_border_header_dialog"
+    android:paddingVertical="@dimen/dp_8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginVertical="@dimen/dp_4"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/bg_activated_gray"
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imv1"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            tools:src="@drawable/ic_next_circle" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_900"
+            tools:text="Chọn hình ảnh" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginVertical="@dimen/dp_4"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/bg_activated_gray"
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imv2"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            tools:src="@drawable/ic_next_circle" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_900"
+            tools:text="Chọn hình ảnh" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginVertical="@dimen/dp_4"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/bg_activated_gray"
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imv3"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            tools:src="@drawable/ic_next_circle" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_900"
+            tools:text="Chọn hình ảnh" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginVertical="@dimen/dp_4"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/bg_activated_gray"
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imv4"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            tools:src="@drawable/ic_next_circle" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+            android:id="@+id/tv4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_900"
+            tools:text="Chọn hình ảnh" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginVertical="@dimen/dp_4"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/bg_activated_gray"
+        android:id="@+id/ll5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imv5"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            tools:src="@drawable/ic_next_circle" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+            android:id="@+id/tv5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_900"
+            tools:text="Chọn hình ảnh" />
+    </LinearLayout>
+</LinearLayout>

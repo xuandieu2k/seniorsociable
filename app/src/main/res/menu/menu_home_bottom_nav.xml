@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/item_tab_1_selector"
+        android:title="@string/home"
+        />
+
+    <item
+        android:id="@+id/menu_news"
+        android:icon="@drawable/item_tab_2_selector"
+        android:title="@string/news"/>
+    <item
+        android:id="@+id/menu_watch"
+        android:icon="@drawable/item_tab_3_selector"
+        android:title="@string/watch"/>
+
+    <item
+        android:id="@+id/menu_message"
+        android:icon="@drawable/item_tab_4_selector"
+        android:title="@string/chat"/>
+
+    <item
+        android:id="@+id/menu_information"
+        android:icon="@drawable/item_tab_6_selector"
+        android:title="@string/setting"/>
+</menu>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.DetailDiseaseActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/black">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:src="@drawable/ic_arrow_start"
+                android:background="@color/transparent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/white"
+                android:contentDescription="@string/default_image" />
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:textColor="@color/white"
+                tools:text="Oke"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="horizontal">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_corner_radius="10"
+                    app:iss_delay="2000"
+                    app:iss_period="4000"
+                    app:iss_text_align="CENTER"
+                    app:iss_title_background="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_title_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_8"/>
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_8"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_title_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_8"/>
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_8"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_symptom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_title_symptom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_8"/>
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_symptom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_8"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_transmission_route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_title_transmission_route"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_8"/>
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_transmission_route"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_8"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_subjects_at_risk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_title_subjects_at_risk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_8"/>
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_subjects_at_risk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_8"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_prevent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_title_prevent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_8"/>
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_prevent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_8"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_diagnostic_measures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_title_diagnostic_measures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_8"/>
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_diagnostic_measures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_treatment_measures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_title_treatment_measures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:background="@color/blue_700"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_8"/>
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tv_treatment_measures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_8"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

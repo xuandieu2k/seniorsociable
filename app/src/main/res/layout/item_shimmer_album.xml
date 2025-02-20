@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RlParent"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_96"
+    android:layout_marginBottom="@dimen/dp_8">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_900"
+        android:alpha="0.4"
+        />
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:id="@+id/tvNameAlbum"
+        android:layout_above="@+id/tvNumberOfAlbum"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gray_200_no_stroke"/>
+    <vn.xdeuhug.seniorsociable.widget.AppTextView
+        android:id="@+id/tvNumberOfAlbum"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gray_200_no_stroke"/>
+</RelativeLayout>

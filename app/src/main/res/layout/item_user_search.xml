@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_8">
+    <ImageView
+        android:id="@+id/imvAvatar"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_gravity="center_vertical|start"
+        tools:src="@drawable/ic_user_default"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            tools:text="Xuân Diệu"/>
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            tools:text="Bạn"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_gravity="center_vertical|end"
+        android:src="@drawable/ic_next_circle"/>
+</LinearLayout>

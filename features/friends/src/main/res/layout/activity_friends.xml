@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/acAddFriend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbAddFriends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lineSize="@dimen/dp_1"
+        app:lineVisible="true"
+        app:rightIcon="@drawable/ic_search"
+        app:rightIconTint="@color/blue_700"
+        app:title="@string/add_friends"
+        app:titleStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/dp_8">
+            <!--    Layout request add friends        -->
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_weight="0.7"-->
+            <!--                android:orientation="vertical"-->
+            <!--                tools:ignore="Suspicious0dp">-->
+
+            <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:text="@string/request_add_friends"
+                android:textColor="@color/gray_600"
+                android:textSize="@dimen/sp_18" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRequestAddFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/sflLoadData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/item_shimmer_add_friend" />
+
+                    <include layout="@layout/item_shimmer_add_friend" />
+
+                    <include layout="@layout/item_shimmer_add_friend" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_160"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <include
+                    android:id="@+id/ltNoData"
+                    layout="@layout/layout_no_data"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <!--            </LinearLayout>-->
+            <!--    Layout is send add friend        -->
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_weight="0.3"-->
+            <!--                android:orientation="vertical"-->
+            <!--                tools:ignore="Suspicious0dp">-->
+
+            <!--                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginHorizontal="@dimen/dp_8"-->
+            <!--                    android:layout_marginBottom="@dimen/dp_8"-->
+            <!--                    android:text="@string/is_send_invite"-->
+            <!--                    android:textColor="@color/gray_600"-->
+            <!--                    android:textSize="@dimen/sp_18" />-->
+
+            <!--                <androidx.recyclerview.widget.RecyclerView-->
+            <!--                    android:id="@+id/rvSendInvite"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content" />-->
+
+            <!--                <com.facebook.shimmer.ShimmerFrameLayout-->
+            <!--                    android:id="@+id/sflSendInvite"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:visibility="gone">-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:gravity="center_vertical"-->
+            <!--                        android:orientation="horizontal">-->
+
+            <!--                        <include layout="@layout/item_shimmer_add_friend" />-->
+            <!--                    </LinearLayout>-->
+            <!--                </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+            <!--                <include-->
+            <!--                    android:id="@+id/ltNoDataSendInvite"-->
+            <!--                    layout="@layout/layout_no_data"-->
+            <!--                    android:visibility="gone" />-->
+            <!--            </LinearLayout>-->
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

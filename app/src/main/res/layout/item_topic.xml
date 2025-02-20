@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dp_8"
+    android:layout_marginStart="@dimen/dp_8"
+    android:layout_marginEnd="@dimen/dp_4">
+    <com.hjq.shape.view.ShapeTextView
+        android:background="@drawable/bg_button_filter_selector"
+        android:id="@+id/tvTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_32"
+        android:drawablePadding="@dimen/dp_4"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_8"
+        android:text="@string/all"
+        android:textColor="@color/color_text_topic" />
+</LinearLayout>

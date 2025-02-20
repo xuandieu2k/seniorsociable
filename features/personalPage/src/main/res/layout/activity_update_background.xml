@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/ic_arrow_start"
+            app:tint="@color/blue_700" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            android:text="@string/update_background"
+            android:textColor="@color/blue_700"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:id="@+id/tvSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:background="@drawable/bg_border_button_8dp_blue_100"
+            android:backgroundTint="@color/blue_700"
+            android:padding="@dimen/dp_4"
+            android:text="@string/update"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray_200" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_160">
+
+                <RelativeLayout
+                    android:id="@+id/RlBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_alignParentTop="true"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/imvBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_120"
+                        android:contentDescription="@string/default_image"
+                        android:maxHeight="@dimen/dp_120"
+                        tools:src="@drawable/ic_notification" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray_200" />
+                </RelativeLayout>
+                <!--                < Relative avatar -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_4"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/RlAvatar"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:id="@+id/imvAvatar"
+                            android:layout_width="@dimen/dp_160"
+                            android:layout_height="@dimen/dp_160"
+                            android:background="@drawable/ic_user_default"
+                            android:foreground="@drawable/bg_circle"
+                            android:contentDescription="@string/default_image"
+                            android:maxHeight="@dimen/dp_80" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center_vertical">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/share_to_post"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbCheckUpToPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:button="@drawable/background_checkbox"
+                    android:checked="false"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_8"
+    android:background="@color/white"
+    android:paddingVertical="@dimen/dp_8"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <!-- Layout Top include Author post and information   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+        <!--  Layout  include Author post     -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:paddingHorizontal="@dimen/dp_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imvAuthor"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/bg_gray_200_border_radius_40dp"
+                android:contentDescription="@string/default_image"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_16"
+                tools:ignore="NestedWeights">
+
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tvAuthor"
+                    android:layout_width="@dimen/dp_160"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gray_200_no_stroke"
+                    android:textColor="@color/gray_900"
+                    android:textSize="@dimen/sp_16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:id="@+id/tvTimePost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gray_200_no_stroke" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_8"
+                        android:text="@string/big_dot"
+                        android:textColor="@color/gray_200" />
+
+                    <ImageView
+                        android:id="@+id/imvTypePost"
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_16"
+                        android:background="@drawable/bg_gray_200_border_radius_40dp"
+                        android:contentDescription="@string/default_image" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Layout include content post   -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_160"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:background="@drawable/bg_gray_200_no_stroke"
+        android:contentDescription="@string/default_image" />
+    <!--  Layout include button like,comment,share  -->
+    <LinearLayout
+        android:id="@+id/llLikeShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+        <!--    Layout Like -->
+        <LinearLayout
+            android:id="@+id/llLike"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start">
+
+            <vn.xdeuhug.seniorsociable.widget.AppButton
+                android:id="@+id/btnLike"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_24"
+                android:background="@drawable/bg_gray_200_no_stroke"
+                android:textColor="@color/gray_600"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+        <!--    Layout Comment -->
+        <LinearLayout
+            android:id="@+id/llComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <vn.xdeuhug.seniorsociable.widget.AppButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_24"
+                android:background="@drawable/bg_gray_200_no_stroke"
+                android:textColor="@color/gray_600"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+        <!--    Layout Share -->
+        <LinearLayout
+            android:id="@+id/llShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <vn.xdeuhug.seniorsociable.widget.AppButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_24"
+                android:background="@drawable/bg_gray_200_no_stroke"
+                android:textColor="@color/gray_600"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

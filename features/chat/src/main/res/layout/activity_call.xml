@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fitsSystemWindows="true"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/dp_16"
+            android:background="@drawable/bg_circle_gray"
+            android:backgroundTint="#28282B"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/ic_arrow_start"
+            android:padding="@dimen/dp_4"
+            app:tint="@color/white" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextViewBold
+            android:id="@+id/tvUsername"
+            android:layout_width="0dp"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/gray_600"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            tools:text="Xuân Diệu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCenter"
+        android:layout_marginTop="@dimen/dp_160"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llTop"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imvAvatar"
+            android:layout_width="@dimen/dp_160"
+            android:layout_height="@dimen/dp_160"
+            android:contentDescription="@string/default_image"
+            android:src="@drawable/ic_user_default" />
+
+        <vn.xdeuhug.seniorsociable.widget.AppTextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textSize="@dimen/sp_16"
+            tools:text="Đang đổ chuông" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_80"
+        android:paddingHorizontal="@dimen/dp_48"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llReceiver"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/llRefuse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btnRefuse"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_call_refuse" />
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tvRefuse"
+                    android:text="@string/refuse"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llAccept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btnAccept"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_call_accept" />
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tvAccept"
+                    android:text="@string/accept"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCaller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llSpeaker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btnSpeaker"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_call_speaker" />
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tvSpeaker"
+                    android:text="@string/speaker"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/btnEnd"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_call_end" />
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tvEnd"
+                    android:text="@string/end"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llMic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/btnMic"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:contentDescription="@string/default_image"
+                    android:src="@drawable/ic_call_mic_active" />
+                <vn.xdeuhug.seniorsociable.widget.AppTextView
+                    android:id="@+id/tvMic"
+                    android:text="@string/mic"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

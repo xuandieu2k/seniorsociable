@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.dynamic-feature'
+    id 'org.jetbrains.kotlin.android'
+}
+android {
+    namespace 'vn.xdeuhug.seniorsociable.login'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    //View Binding
+    buildFeatures {
+        viewBinding true
+        //noinspection DataBindingWithoutKapt
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation project(":app")
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'com.google.android.gms:play-services-auth:20.6.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.annotation:annotation:1.6.0'
+    implementation 'com.github.appsfeature:otp-view:1.0'
+//    // Add the dependencies for the App Check libraries
+//    // When NOT using the BoM, you must specify versions in Firebase library dependencies
+//    implementation("com.google.firebase:firebase-appcheck-playintegrity:17.0.1")
+//    implementation("com.google.firebase:firebase-appcheck-ktx:17.0.1")
+
+}

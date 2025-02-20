@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/ttBar"
+        layout="@layout/item_title_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <!-- NestedScrollView bao gồm RecyclerViews -->
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/splReset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ttBar"
+        android:layout_alignParentBottom="true">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Đặt các RecyclerView và nội dung bên dưới ở đây -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_200"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llCreatePost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:paddingVertical="@dimen/dp_8">
+
+                    <!-- Thêm các phần tử khác ở đây -->
+                    <ImageView
+                        android:id="@+id/imvAvatar"
+                        android:layout_width="@dimen/dp_32"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_gravity="center_vertical|start"
+                        android:contentDescription="@string/default_image" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:id="@+id/tvCreatePost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_16"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_border_gray_300"
+                        android:paddingHorizontal="@dimen/dp_16"
+                        android:paddingVertical="@dimen/dp_8"
+                        android:text="@string/do_you_thinking_about" />
+
+                    <ImageView
+                        android:id="@+id/imvChoosePicture"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/ic_gallery_ss"
+                        android:contentDescription="@string/default_image" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRvStory"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_208"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/gray_200" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvStory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/sflLoadStory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <include layout="@layout/item_story_shimmer" />
+
+                            <include layout="@layout/item_story_shimmer" />
+
+                            <include layout="@layout/item_story_shimmer" />
+                        </LinearLayout>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/gray_200" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/loadMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_4"
+                    android:visibility="gone">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:src="@drawable/picture_anim_progress"
+                        android:tint="@color/red_app_senior_sociable" />
+
+                    <vn.xdeuhug.seniorsociable.widget.AppTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đang tải..."
+                        android:textColor="@color/red_app_senior_sociable" />
+
+                </LinearLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/sflLoadData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/item_post_shimmer" />
+
+                        <include layout="@layout/item_post_shimmer" />
+
+                        <include layout="@layout/item_post_shimmer" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</RelativeLayout>
